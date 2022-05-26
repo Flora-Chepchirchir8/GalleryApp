@@ -1,30 +1,22 @@
-{% load bootstrap3 %}
-{% load static%}
+{% load bootstrap4 %} {% load static%}
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-
-  {% if title %}
-  <title>Moringa Tribune - {{title}}</title>
-  {% else %}
+    <meta charset="utf-8"> {% if title %}
+    <title>Moringa Tribune - {{title}}</title>
+    {% else %}
     <title> Moringa Tribune </title>
-  {% endif %}
-
-  {% block styles %}
-    {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
-  {% endblock %}
-
+    {% endif %} {% block styles %} {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basenews.css' %}"> {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
-    {% include "navbar.html" %}
-
-    {% block content %} <h1 class='text-center'>News for {{date|date:"l d-F Y"}}</h1> {%endblock%}
-
-    {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
-    {% endblock %}
+    {% include "navbar.html" %} {% block content %}
+    <h1 class='text-center'>News for {{date|date:"l d-F Y"}}</h1> {%endblock%} {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %} {% endblock %}
 </body>
+
 </html>
