@@ -53,5 +53,5 @@ class Article(models.Model):
         news = cls.objects.filter(title__icontains=search_term)
         return 
 
-        hello
+    
     
