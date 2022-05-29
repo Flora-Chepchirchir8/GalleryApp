@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.urls import re_path as url,include
+from django.urls import re_path,include
 
+urlpatterns = [
+    re_path('admin/', admin.site.urls),
+    re_path(r'',include('picha.urls')),
 
-urlpatterns = [ 
-    url(r'admin/', admin.site.urls),
-    url(r'', include('news.urls')),
-  
 ]
