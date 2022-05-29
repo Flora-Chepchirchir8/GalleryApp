@@ -54,5 +54,5 @@ class Article(models.Model):
         return news
 
 
-    
+    hello
     
