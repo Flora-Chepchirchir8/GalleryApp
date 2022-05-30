@@ -1,8 +1,8 @@
-<nav class=" navbar-inverse" style="background-color:#6153cc; color:aliceblue;">
+<nav class=" navbar-inverse" style="background-color:#0d0e0d; color:aliceblue;">
   <div class="container-fluid">
       <div class=" navbar-header ">
-          <a class=" navbar-brand " href="{% url 'gallery' %} " style="background-color:#6153cc; color:aliceblue;">Jada Gallery </a>
-          <a class=" navbar-brand " href="{% url 'displayImages' %} " style="background-color:#6153cc; color:aliceblue;"> Gallery </a>
+          <a class=" navbar-brand " href="{% url 'gallery' %} " style="background-color:#0a0a0a; color:aliceblue;">Lora Gallery </a>
+          <a class=" navbar-brand " href="{% url 'displayImages' %} " style="background-color:#050505; color:aliceblue;"> Gallery </a>
       </div>
       <!-- Adding a search form  -->
       <div class="col-sm-4 col-md-4 navbar-right">
@@ -10,9 +10,9 @@
           <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search Image" name="image">
+                  <input type="text" class="form-control" placeholder="Search Image" name="category">
                   <div class="input-group-btn">
-                      <button class="btn btn-primary " type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                      <button class="btn" style="background-color: #dd0256;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                   </div>
               </div>
 
