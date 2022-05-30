@@ -12,43 +12,38 @@
     <div class="row">
 
         {% if images %} {% for i in images %}
-        <div class="col-sm-6 col-md-3">
+        <div class="col-6">
             <h1>{{i.name}}</h1>
-            
-    <div class="col-6" style="border:solid 1px #c7c5c6;border-radius: 20px;">
-        <a href="#" class="btn btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#solid{{i.id}}">
-            <img src="{{i.img.url}}" class="img-responsive" alt="Image"  height="400px" width="300px"></a> 
-    </div> 
-
-    <div class="modal fade" id="solid{{i.id}}" tabindex="" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: #dd0256;"> {{i.name}} </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-                </div>
-                    <div class="modal-body col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <img src=" {{i.img.url}} " class="img-responsive " alt="Image " class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> </a>
-                        <h2 class="text-center " style="color: #dd0256; "> {{ i.name }} </h2>
-                        <p>{{i.description}}</p>
-                        <p style="color: #dd0256;">Location: {{i.location}}</p>
-                    </div>
-                <div class="modal-footer ">
                     
-                    <input class="form-control input-sm" type="text" value="{{i.img.url}}" id="{{i.id}}.url"><br>
-                  <button type="button" value="" onclick="copyFunction('{{i.id}}.url')" class="btn btn-primary btn-sm">Copy Link</button>
-              
+            <div class="col-sm-4 col-md-4 col-lg-6" style="border:solid 1px #c7c5c6;border-radius: 20px;">
+                <a href="#" class="btn btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#solid{{i.id}}">
+                    <img src="{{i.img.url}}" class="img-responsive" alt="Image"  height="400px" width="300px"></a> 
+            </div> 
 
+            <div class="modal fade" id="solid{{i.id}}" tabindex="" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle" style="color: #dd0256;"> {{i.name}} </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                        </div>
+                            <div class="modal-body col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <img src=" {{i.img.url}} " class="img-responsive " alt="Image " class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> </a>
+                                <h2 class="text-center " style="color: #dd0256; "> {{ i.name }} </h2>
+                                <p>{{i.description}}</p>
+                                <p style="color: #dd0256;">Location: {{i.location}}</p>
+                            </div>
+                        <div class="modal-footer ">
+                            
+                            <input class="form-control input-sm" type="text" value="{{i.img.url}}" id="{{i.id}}.url"><br>
+                        <button type="button" value="" onclick="copyFunction('{{i.id}}.url')" class="btn btn-primary btn-sm">Copy Link</button>
+                    
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-
-
-
         </div>
         {% endfor %} {% endif %}
     </div>
